@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+
+<svg display="none">
+	<symbol id="calendar" viewBox="0 0 24 24">
+		<g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+			<polyline points="8,1 8,6" />
+			<polyline points="16,1 16,6" />
+			<polyline points="2,10 22,10" />
+			<circle cx="7" cy="14" r="1" />
+			<circle cx="12" cy="14" r="1" />
+			<circle cx="17" cy="14" r="1" />
+			<circle cx="7" cy="19" r="1" />
+			<circle cx="12" cy="19" r="1" />
+			<circle cx="17" cy="19" r="1" />
+			<rect x="2" y="3" rx="3" ry="3" width="20" height="20" />
+		</g>
+	</symbol>
+	<symbol id="export" viewBox="0 0 24 24">
+		<g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+			<polyline points="8,5 12,1 16,5" />
+			<polyline points="12,1 12,16" />
+			<rect x="2" y="10" rx="3" ry="3" width="20" height="13" />
+		</g>
+	</symbol>
+	<symbol id="hat" viewBox="0 0 24 24">
+		<g class="svg-icon" viewBox="0 0 20 20">
+			<path d="M3.24,7.51c-0.146,0.142-0.146,0.381,0,0.523l5.199,5.193c0.234,0.238,0.633,0.064,0.633-0.262v-2.634c0.105-0.007,0.212-0.011,0.321-0.011c2.373,0,4.302,1.91,4.302,4.258c0,0.957-0.33,1.809-1.008,2.602c-0.259,0.307,0.084,0.762,0.451,0.572c2.336-1.195,3.73-3.408,3.73-5.924c0-3.741-3.103-6.783-6.916-6.783c-0.307,0-0.615,0.028-0.881,0.063V2.575c0-0.327-0.398-0.5-0.633-0.261L3.24,7.51 M4.027,7.771l4.301-4.3v2.073c0,0.232,0.21,0.409,0.441,0.366c0.298-0.056,0.746-0.123,1.184-0.123c3.402,0,6.172,2.709,6.172,6.041c0,1.695-0.718,3.24-1.979,4.352c0.193-0.51,0.293-1.045,0.293-1.602c0-2.76-2.266-5-5.046-5c-0.256,0-0.528,0.018-0.747,0.05C8.465,9.653,8.328,9.81,8.328,9.995v2.074L4.027,7.771z"></path>
+		</g>
+	</symbol>
+	<symbol id="laptop" viewBox="0 0 24 24">
+		<g class="svg-icon" viewBox="0 0 20 20">
+			<path d="M3.24,7.51c-0.146,0.142-0.146,0.381,0,0.523l5.199,5.193c0.234,0.238,0.633,0.064,0.633-0.262v-2.634c0.105-0.007,0.212-0.011,0.321-0.011c2.373,0,4.302,1.91,4.302,4.258c0,0.957-0.33,1.809-1.008,2.602c-0.259,0.307,0.084,0.762,0.451,0.572c2.336-1.195,3.73-3.408,3.73-5.924c0-3.741-3.103-6.783-6.916-6.783c-0.307,0-0.615,0.028-0.881,0.063V2.575c0-0.327-0.398-0.5-0.633-0.261L3.24,7.51 M4.027,7.771l4.301-4.3v2.073c0,0.232,0.21,0.409,0.441,0.366c0.298-0.056,0.746-0.123,1.184-0.123c3.402,0,6.172,2.709,6.172,6.041c0,1.695-0.718,3.24-1.979,4.352c0.193-0.51,0.293-1.045,0.293-1.602c0-2.76-2.266-5-5.046-5c-0.256,0-0.528,0.018-0.747,0.05C8.465,9.653,8.328,9.81,8.328,9.995v2.074L4.027,7.771z"></path>
+		</g>
+	</symbol>
+	<symbol id="monitor" viewBox="0 0 24 24">
+		<g class="svg-icon" viewBox="0 0 20 20">
+			<path d="M3.24,7.51c-0.146,0.142-0.146,0.381,0,0.523l5.199,5.193c0.234,0.238,0.633,0.064,0.633-0.262v-2.634c0.105-0.007,0.212-0.011,0.321-0.011c2.373,0,4.302,1.91,4.302,4.258c0,0.957-0.33,1.809-1.008,2.602c-0.259,0.307,0.084,0.762,0.451,0.572c2.336-1.195,3.73-3.408,3.73-5.924c0-3.741-3.103-6.783-6.916-6.783c-0.307,0-0.615,0.028-0.881,0.063V2.575c0-0.327-0.398-0.5-0.633-0.261L3.24,7.51 M4.027,7.771l4.301-4.3v2.073c0,0.232,0.21,0.409,0.441,0.366c0.298-0.056,0.746-0.123,1.184-0.123c3.402,0,6.172,2.709,6.172,6.041c0,1.695-0.718,3.24-1.979,4.352c0.193-0.51,0.293-1.045,0.293-1.602c0-2.76-2.266-5-5.046-5c-0.256,0-0.528,0.018-0.747,0.05C8.465,9.653,8.328,9.81,8.328,9.995v2.074L4.027,7.771z"></path>
+		</g>
+	</symbol>
+	<symbol id="pants" viewBox="0 0 24 24">
+		<g class="svg-icon" viewBox="0 0 20 20">
+			<path d="M3.24,7.51c-0.146,0.142-0.146,0.381,0,0.523l5.199,5.193c0.234,0.238,0.633,0.064,0.633-0.262v-2.634c0.105-0.007,0.212-0.011,0.321-0.011c2.373,0,4.302,1.91,4.302,4.258c0,0.957-0.33,1.809-1.008,2.602c-0.259,0.307,0.084,0.762,0.451,0.572c2.336-1.195,3.73-3.408,3.73-5.924c0-3.741-3.103-6.783-6.916-6.783c-0.307,0-0.615,0.028-0.881,0.063V2.575c0-0.327-0.398-0.5-0.633-0.261L3.24,7.51 M4.027,7.771l4.301-4.3v2.073c0,0.232,0.21,0.409,0.441,0.366c0.298-0.056,0.746-0.123,1.184-0.123c3.402,0,6.172,2.709,6.172,6.041c0,1.695-0.718,3.24-1.979,4.352c0.193-0.51,0.293-1.045,0.293-1.602c0-2.76-2.266-5-5.046-5c-0.256,0-0.528,0.018-0.747,0.05C8.465,9.653,8.328,9.81,8.328,9.995v2.074L4.027,7.771z"></path>
+		</g>
+	</symbol>
+	<symbol id="shirt" viewBox="0 0 24 24">
+		<g class="svg-icon" viewBox="0 0 20 20">
+			<path d="M3.24,7.51c-0.146,0.142-0.146,0.381,0,0.523l5.199,5.193c0.234,0.238,0.633,0.064,0.633-0.262v-2.634c0.105-0.007,0.212-0.011,0.321-0.011c2.373,0,4.302,1.91,4.302,4.258c0,0.957-0.33,1.809-1.008,2.602c-0.259,0.307,0.084,0.762,0.451,0.572c2.336-1.195,3.73-3.408,3.73-5.924c0-3.741-3.103-6.783-6.916-6.783c-0.307,0-0.615,0.028-0.881,0.063V2.575c0-0.327-0.398-0.5-0.633-0.261L3.24,7.51 M4.027,7.771l4.301-4.3v2.073c0,0.232,0.21,0.409,0.441,0.366c0.298-0.056,0.746-0.123,1.184-0.123c3.402,0,6.172,2.709,6.172,6.041c0,1.695-0.718,3.24-1.979,4.352c0.193-0.51,0.293-1.045,0.293-1.602c0-2.76-2.266-5-5.046-5c-0.256,0-0.528,0.018-0.747,0.05C8.465,9.653,8.328,9.81,8.328,9.995v2.074L4.027,7.771z"></path>
+		</g>
+	</symbol>
+	<symbol id="smartphone" viewBox="0 0 24 24">
+		<g class="svg-icon" viewBox="0 0 20 20">
+			<path d="M3.24,7.51c-0.146,0.142-0.146,0.381,0,0.523l5.199,5.193c0.234,0.238,0.633,0.064,0.633-0.262v-2.634c0.105-0.007,0.212-0.011,0.321-0.011c2.373,0,4.302,1.91,4.302,4.258c0,0.957-0.33,1.809-1.008,2.602c-0.259,0.307,0.084,0.762,0.451,0.572c2.336-1.195,3.73-3.408,3.73-5.924c0-3.741-3.103-6.783-6.916-6.783c-0.307,0-0.615,0.028-0.881,0.063V2.575c0-0.327-0.398-0.5-0.633-0.261L3.24,7.51 M4.027,7.771l4.301-4.3v2.073c0,0.232,0.21,0.409,0.441,0.366c0.298-0.056,0.746-0.123,1.184-0.123c3.402,0,6.172,2.709,6.172,6.041c0,1.695-0.718,3.24-1.979,4.352c0.193-0.51,0.293-1.045,0.293-1.602c0-2.76-2.266-5-5.046-5c-0.256,0-0.528,0.018-0.747,0.05C8.465,9.653,8.328,9.81,8.328,9.995v2.074L4.027,7.771z"></path>
+		</g>
+	</symbol>
+	<symbol id="tablet" viewBox="0 0 24 24">
+		<g class="svg-icon" viewBox="0 0 20 20">
+			<path d="M3.24,7.51c-0.146,0.142-0.146,0.381,0,0.523l5.199,5.193c0.234,0.238,0.633,0.064,0.633-0.262v-2.634c0.105-0.007,0.212-0.011,0.321-0.011c2.373,0,4.302,1.91,4.302,4.258c0,0.957-0.33,1.809-1.008,2.602c-0.259,0.307,0.084,0.762,0.451,0.572c2.336-1.195,3.73-3.408,3.73-5.924c0-3.741-3.103-6.783-6.916-6.783c-0.307,0-0.615,0.028-0.881,0.063V2.575c0-0.327-0.398-0.5-0.633-0.261L3.24,7.51 M4.027,7.771l4.301-4.3v2.073c0,0.232,0.21,0.409,0.441,0.366c0.298-0.056,0.746-0.123,1.184-0.123c3.402,0,6.172,2.709,6.172,6.041c0,1.695-0.718,3.24-1.979,4.352c0.193-0.51,0.293-1.045,0.293-1.602c0-2.76-2.266-5-5.046-5c-0.256,0-0.528,0.018-0.747,0.05C8.465,9.653,8.328,9.81,8.328,9.995v2.074L4.027,7.771z"></path>
+		</g>
+	</symbol>
+</svg>
+<main class="db">
+	<div class="db__toolbar">
+		<h1 class="db__heading">Cryptocurrency Price Chart</h1>
+		<div class="db__toolbar-btns">
+			<button class="db__select" type="button">
+				<svg class="db__select-icon" width="24px" height="24px" aria-hidden="true">
+					<use xlink:href="#calendar" />
+				</svg>
+				Date
+			</button>
+			<button class="db__select" type="button">
+				<svg class="db__select-icon" width="24px" height="24px" aria-hidden="true">
+					<use xlink:href="#export" />
+				</svg>
+				Export Spreadsheet
+			</button>
+		</div>
+	</div>
+	<div class="db__cell">
+		<h2 class="db__top-stat">Total Crypto Marketcap</h2>
+		<div class="db__progress">
+			<div class="db__progress-fill" style="transform:translateX(15%)"></div>
+		</div>
+		<div class="db__counter">
+			<div class="db__counter-value" title="$3,330,050.90">$935,479,628,743 USD</div>
+			<div class="db__counter-label">
+				<strong>+.5%</strong><br><small>vs yesterday</small>
+			</div>
+		</div>
+	</div>
+	<div class="db__cell">
+		<h2 class="db__top-stat">Today’s Growth</h2>
+		<div class="db__progress">
+			<div class="db__progress-fill" style="transform:translateX(1%)"></div>
+		</div>
+		<div class="db__counter">
+			<div class="db__counter-value">7,410</div>
+			<div class="db__counter-label">
+				<strong>+1%</strong><br><small>vs yesterday</small>
+			</div>
+		</div>
+	</div>
+	<div class="db__cell">
+		<h2 class="db__top-stat">Avg. Yearly Price</h2>
+		<div class="db__progress">
+			<div class="db__progress-fill" style="transform:translateX(42%)"></div>
+		</div>
+		<div class="db__counter">
+			<div class="db__counter-value">$47,743</div>
+			<div class="db__counter-label">
+				<strong>+42%</strong><br><small>vs yesterday</small>
+			</div>
+		</div>
+	</div>
+	<div class="db__cell">
+		<h2 class="db__subheading">Bitcoin Price per Year (Jan. 1)</h2>
+		<div class="db__bars">
+			<div class="db__bars-cell">
+				<div class="db__bars-cell-bar" title="$4,610,555.90">
+					<div class="db__bars-cell-bar-fill" style="transform:translateY(-1.2%)"></div>
+				</div>
+			</div>
+			<div class="db__bars-cell">
+				<div class="db__bars-cell-bar" title="$3,612,857.76">
+					<div class="db__bars-cell-bar-fill" style="transform:translateY(-2.3%)"></div>
+				</div>
+			</div>
+			<div class="db__bars-cell">
+				<div class="db__bars-cell-bar" title="$2,137,371.54">
+					<div class="db__bars-cell-bar-fill" style="transform:translateY(-25.7%)"></div>
+				</div>
+			</div>
+			<div class="db__bars-cell">
+				<div class="db__bars-cell-bar" title="$4,856,109.94">5M
+					<div class="db__bars-cell-bar-fill" style="transform:translateY(-9.1%)"></div>
+				</div>
+			</div>
+			<div class="db__bars-cell">
+				<div class="db__bars-cell-bar" title="$3,662,766.81">
+					<div class="db__bars-cell-bar-fill" style="transform:translateY(-18.3%)"></div>
+				</div>
+			</div>
+			<div class="db__bars-cell">
+				<div class="db__bars-cell-bar" title="$2,895,150.25">
+					<div class="db__bars-cell-bar-fill" style="transform:translateY(-55.9%)"></div>
+				</div>
+			</div>
+			<div class="db__bars-cell">
+				<div class="db__bars-cell-bar" title="$3,330,050.90">
+					<div class="db__bars-cell-bar-fill" style="transform:translateY(-33.6%)"></div>
+				</div>
+			</div>
+			<div class="db__bars-cell">$50k</div>
+			<div class="db__bars-cell">$40k</div>
+			<div class="db__bars-cell">$30k</div>
+			<div class="db__bars-cell">$20k</div>
+			<div class="db__bars-cell">$10k</div>
+			<div class="db__bars-cell"></div>
+			<div class="db__bars-cell">
+				<time datetime="2022-05-01">5/1</time>
+			</div>
+			<div class="db__bars-cell">
+				<time datetime="2022-05-02">5/2</time>
+			</div>
+			<div class="db__bars-cell">
+				<time datetime="2022-05-03">5/3</time>
+			</div>
+			<div class="db__bars-cell">
+				<time datetime="2022-05-04">5/4</time>
+			</div>
+			<div class="db__bars-cell">
+				<time datetime="2022-05-05">5/5</time>
+			</div>
+			<div class="db__bars-cell">
+				<time datetime="2022-05-06">5/6</time>
+			</div>
+			<div class="db__bars-cell">
+				<time datetime="2022-05-07">5/7</time>
+			</div>
+		</div>
+	</div>
+	<div class="db__cell">
+		<h2 class="db__subheading">Web3 Metaverse Rankings (Coming Soon)</h2>
+		<table class="db__product-table">
+			<thead>
+				<tr>
+					<th>Product</th>
+					<th>Orders</th>
+					<th>Status</th>
+					<th>Price</th>
+				</tr>
+			</thead>
+				<!-- <tbody>
+					<t>
+						metaverse stuff
+					</t>
+				</tbody> -->
+		</table>
+	</div>
+	<div class="db__cell">
+		<h2 class="db__subheading">Top 3 Cryptos</h2>
+		<div class="db__bubbles">
+			<div class="db__bubble">
+				<span class="db__bubble-text">
+					
+					Bitcoin<br><strong class="db__bubble-value">$19,307.34</strong><br>BTC
+				</span>
+			</div>
+			<div class="db__bubble">
+				<span class="db__bubble-text">
+					Ethereum<br><strong class="db__bubble-value">$1,309.54</strong><br>ETH
+				</span>
+			</div>
+			<div class="db__bubble">
+				<span class="db__bubble-text">
+					Binance Coin<br><strong class="db__bubble-value">$282.53</strong><br>BNB
+				</span>
+			</div>
+		</div>
+	</div>
+	<div class="db__cell">
+		<h2 class="db__subheading">Top Crypto Prices (Differing Supplies)</h2>
+		<div class="db__order">
+			<div class="db__order-cat">
+				<svg class="db__order-cat-icon" width="24px" height="24px" aria-hidden="true">
+					<use xlink:href="#smartphone" />
+				</svg>
+			</div>
+			<div class="db__order-name">
+				Bitcoin<br>
+				<small>
+					<time datetime="2022-05-07 18:49:00">May 7 at 6:49 PM</time>
+				</small>
+			</div>
+			<div><strong>$19.301.81</strong></div>
+		</div>
+		<div class="db__order">
+			<div class="db__order-cat">
+				<svg class="db__order-cat-icon" width="24px" height="24px" aria-hidden="true">
+					<use xlink:href="#laptop" />
+				</svg>
+			</div>
+			<div class="db__order-name">
+				Ethereum<br>
+				<small>
+					<time datetime="2022-05-07 18:49:00">May 7 at 6:49 PM</time>
+				</small>
+			</div>
+			<div><strong>$1309.62</strong></div>
+		</div>
+		<div class="db__order">
+			<div class="db__order-cat">
+				<svg class="db__order-cat-icon" width="24px" height="24px" aria-hidden="true">
+					<use xlink:href="#pants" />
+				</svg>
+			</div>
+			<div class="db__order-name">
+				Binance Coin<br>
+				<small>
+					<time datetime="2022-05-07 18:49:00">May 7 at 6:49 PM</time>
+				</small>
+			</div>
+			<div><strong>$282.49</strong></div>
+		</div>
+		<div class="db__order">
+			<div class="db__order-cat">
+				<svg class="db__order-cat-icon" width="24px" height="24px" aria-hidden="true">
+					<use xlink:href="#shirt" />
+				</svg>
+			</div>
+			<div class="db__order-name">
+				XRP<br>
+				<small>
+					<time datetime="2022-05-07 18:49:00">May 7 at 6:49 PM</time>
+				</small>
+			</div>
+			<div><strong>$0.4746</strong></div>
+		</div>
+		<div class="db__order">
+			<div class="db__order-cat">
+				<svg class="db__order-cat-icon" width="24px" height="24px" aria-hidden="true">
+					<use xlink:href="#monitor" />
+				</svg>
+			</div>
+			<div class="db__order-name">
+				Cardano<br>
+				<small>
+					<time datetime="2022-05-07 18:49:00">May 7 at 6:49 PM</time>
+				</small>
+			</div>
+			<div><strong>$0.4315</strong></div>
+		</div>
+		<div class="db__order">
+			<div class="db__order-cat">
+				<svg class="db__order-cat-icon" width="24px" height="24px" aria-hidden="true">
+					<use xlink:href="#tablet" />
+				</svg>
+			</div>
+			<div class="db__order-name">
+				Solana<br>
+				<small>
+					<time datetime="2022-05-07 18:49:00">May 7 at 6:49 PM</time>
+				</small>
+			</div>
+			<div><strong>$32.85</strong></div>
+		</div>
+		<div class="db__order">
+			<div class="db__order-cat">
+				<svg class="db__order-cat-icon" width="24px" height="24px" aria-hidden="true">
+					<use xlink:href="#hat" />
+				</svg>
+			</div>
+			<div class="db__order-name">
+				Dogecoin<br>
+				<small>
+					<time datetime="2022-05-07 18:49:00">May 7 at 6:49 PM</time>
+				</small>
+			</div>
+			<div><strong>$.06077</strong></div>
+		</div>
+	</div>
+</main>
+
+</body>
+</html>
